@@ -76,7 +76,7 @@ export default function CartPage() {
             ))}
           </ul>
 
-          <aside className="h-fit rounded-tag border border-line bg-white p-4 lg:sticky lg:top-4">
+          <aside className="h-fit rounded-tag border border-line bg-white p-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)]">
             <dl className="tabular space-y-1.5 text-sm">
               <div className="flex justify-between">
                 <dt className="text-plum">{t.subtotal}</dt>

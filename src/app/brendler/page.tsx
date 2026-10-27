@@ -19,7 +19,7 @@ export default function BrandsPage() {
       <h1 className="font-display text-4xl italic">{az.brands.title}</h1>
       <p className="mt-1 text-plum">{az.brands.lead}</p>
 
-      <nav aria-label="A-Z" className="sticky top-0 z-10 -mx-4 mt-5 border-y border-line bg-paper/95 px-4 py-2 backdrop-blur">
+      <nav aria-label="A-Z" className="sticky top-[var(--header-h)] z-30 -mx-4 mt-5 border-y border-line bg-paper/95 px-4 py-2 backdrop-blur">
         <ul className="flex flex-wrap gap-1">
           {letters.map((l) => (
             <li key={l}>
@@ -36,7 +36,7 @@ export default function BrandsPage() {
 
       <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
         {letters.map((l) => (
-          <section key={l} id={`herf-${l}`} className="scroll-mt-16">
+          <section key={l} id={`herf-${l}`} className="scroll-mt-[calc(var(--header-h)+5rem)]">
             <h2 className="border-b border-line pb-1 font-display text-3xl italic text-rozel">{l}</h2>
             <ul className="mt-2">
               {groups.get(l)!.map((b) => (

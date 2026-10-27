@@ -42,9 +42,32 @@ body {
   display: none;
 }
 
-/* Мягкий малиново-розовый, единственный градиент на сайте, только в шапке главной */
-.home-glow {
-  background: linear-gradient(180deg, #fbd3e2 0%, var(--color-paper) 100%);
+/* Мягкий малиново-розовый, единственный градиент на сайте, только в шапке главной.
+   Шапка разрезана на три блока (логотип, липкая панель, полка цен), поэтому градиент
+   собран из трёх отрезков с совпадающими цветами на стыках. */
+.glow-top {
+  background: linear-gradient(180deg, #fbd3e2, #fcdbe7);
+}
+.glow-mid {
+  background: linear-gradient(180deg, #fcdbe7, #fde3ec);
+}
+.glow-bottom {
+  background: linear-gradient(180deg, #fde3ec, var(--color-paper));
+}
+@media (min-width: 768px) {
+  .glow-mid {
+    background: linear-gradient(180deg, #fbd3e2, #fde3ec);
+  }
+}
+
+/* Высота липкой шапки, уточняется из Header через ResizeObserver */
+:root {
+  --header-h: 61px;
+}
+@media (min-width: 768px) {
+  :root {
+    --header-h: 73px;
+  }
 }
 
 input[type="number"]::-webkit-inner-spin-button,

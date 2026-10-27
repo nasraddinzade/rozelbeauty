@@ -207,7 +207,7 @@ export default function CheckoutPage() {
           </fieldset>
         </div>
 
-        <aside className="h-fit rounded-tag border border-line bg-white p-4 lg:sticky lg:top-4">
+        <aside className="h-fit rounded-tag border border-line bg-white p-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)]">
           <h2 className="font-display text-xl italic">{t.summary}</h2>
           <ul className="mt-3 space-y-2 text-sm">
             {lines.map((l) => (

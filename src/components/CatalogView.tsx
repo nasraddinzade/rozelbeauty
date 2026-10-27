@@ -83,7 +83,7 @@ export function CatalogView({ title, lockedBrand }: Props) {
     <div className="mx-auto max-w-[1320px] px-4 pt-5">
       <div className="lg:grid lg:grid-cols-[236px_minmax(0,1fr)] lg:gap-7">
         <aside className="hidden lg:block">
-          <div className="sticky top-4 max-h-[calc(100vh-2rem)] overflow-y-auto pb-6 pr-1">
+          <div className="sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100vh-var(--header-h)-2rem)] overflow-y-auto pb-6 pr-1">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="font-display text-xl italic">{t.filters}</h2>
               {activeCount > 0 && (
