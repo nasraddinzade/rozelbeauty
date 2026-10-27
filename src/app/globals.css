@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rozel: #c8286b; /* малиновый Rozel: кнопки, логотип, цена */
+  --color-rozel-dark: #a91f59;
+  --color-paper: #fff1f5; /* розовая бумага, фон страниц */
+  --color-ink: #2a0e1e; /* чернильная слива, основной текст */
+  --color-tag: #ffd84d; /* ценниковый жёлтый */
+  --color-plum: #7a3a55; /* второй текст, зачёркнутая цена, границы */
+  --color-line: rgb(122 58 85 / 0.22); /* границы 1px из приглушённой сливы */
+  --color-card: #ffffff;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-sans-text), system-ui, sans-serif;
+
+  --radius-tag: 6px;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  /* страховка: горизонтальной прокрутки страницы быть не должно ни на одном экране */
+  overflow-x: clip;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Горизонтальные ленты на главной: прокрутка внутри ленты, страница остаётся на месте. */
+.rail {
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* Мягкий малиново-розовый, единственный градиент на сайте, только в шапке главной */
+.home-glow {
+  background: linear-gradient(180deg, #fbd3e2 0%, var(--color-paper) 100%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rozel);
+  outline-offset: 2px;
+}
